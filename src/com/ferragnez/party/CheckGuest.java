@@ -9,6 +9,7 @@ public class CheckGuest {
             System.out.println(guests[i]);
         }
         Scanner input = new Scanner(System.in);
+        System.out.println("What's your name?");
         String guestName = input.nextLine();
         input.close();
 
@@ -23,11 +24,18 @@ public class CheckGuest {
             }
         }
 
+        // ***BONUS***
+        // for ( int i = 0; i < guests.length; i++){
+        //     if (guests[i].replaceAll("\\s{2,}"," ").replaceAll("\\-"," ").trim().equalsIgnoreCase(guestName.replaceAll("\\s{2,}"," ").replaceAll("\\-"," ").trim())){
+        //         isInTheList = true;
+        //         break;
+        //     }
+        // }
+        
         if (isInTheList) {
             System.out.println("Guest Found");
         } else {
-           System.out.println("Guest NOT Found"); 
+            System.out.println("Guest NOT Found"); 
         }
-
     }
 }
