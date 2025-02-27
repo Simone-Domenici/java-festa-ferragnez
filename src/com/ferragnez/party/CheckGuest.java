@@ -16,7 +16,7 @@ public class CheckGuest {
         int index = 0;
 
         while (!isInTheList && index < guests.length) {
-            if (guests[index].equalsIgnoreCase(guestName)){
+            if (guests[index].replaceAll("\\s{2,}"," ").replaceAll("\\-"," ").trim().equalsIgnoreCase(guestName.replaceAll("\\s{2,}"," ").replaceAll("\\-"," ").trim())){
                 isInTheList = true;
             } else {
                 index++;
